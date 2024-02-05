@@ -26,6 +26,11 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
+      - name: Install dependencies
+        run: |
+          cd ./C2/starter_files
+          make install
+          
       - name: Check link
         run: |
           cd ./C2/starter_files
